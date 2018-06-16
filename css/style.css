@@ -201,7 +201,7 @@ ul li{
 .text_photo {
 	max-width: 445px;
 	position: absolute;
-	bottom: 35px;
+	bottom: 5%;
     left: 55px;
 }
 .text_photo h1{
@@ -268,6 +268,7 @@ ul li{
 	align-items: center;
 	justify-content: center;
 	line-height: 65px;
+	flex-wrap: nowrap;
 	
 }
 .busket a{
@@ -456,7 +457,7 @@ ul li{
 }
 .grey_zone {
 	max-width: 100%;
-	min-height: 191px;
+	min-height: 210px;
 	background: url(../img/Layer50.png);
 	margin-top: -20px;
 }
@@ -672,7 +673,7 @@ ul li{
 	margin-top: 20px;
 }
 .name_form, .email_form {
-	max-width: 205px;
+	width: 50%;
 	height: 40px;
 	border-radius: 5px;
 	padding: 0 5px;
@@ -680,7 +681,7 @@ ul li{
 	border-style: solid;
 }
 .text_from {
-	width: 420px;
+	width: 100%;
 	height: 132px;
 	border-radius: 5px;
 	padding: 0 5px;
@@ -715,6 +716,9 @@ ul li{
 	
 
 }
+.flex_name_email {
+		flex-wrap: wrap;
+	}
 .name_email {
 	display: none;
 }
@@ -814,8 +818,10 @@ ul li{
 	position: absolute;
 	top: 60px;
 	right: -70px;
-	
 }
+form{
+		width: 100%;
+	}
 #drop_menu li {
 	background-color: #0092cd;
 	padding: 0 20px;
@@ -829,6 +835,9 @@ ul li{
 	justify-content: center;
 	margin: 30px 0;
 
+}
+.brands1{
+	display: none;
 }
 .img2{
 	display: flex;
@@ -945,6 +954,7 @@ ul li{
 	justify-content: center;
 	align-items: center;
 	margin-top: 30px; 
+	padding: 0 10px;
 }
 .sign_in_wrap1 {
 	padding: 10px 10px; 
@@ -973,7 +983,31 @@ ul li{
 	display: none;
 	margin-left: 45%;
 }
-
+@media screen and (max-width: 1068px){
+	.nav{
+		margin-left: 50px;}
+	.contact_page {
+		margin-left: 50px;
+	}
+	.slick_photos{
+		margin-left: 50px;
+	}
+}
+@media screen and (max-width: 884px){
+	.contact-info {
+		justify-content: center;
+	}
+	.left_block_contact {
+    	width: 100%;}
+	.right_block_contact {
+    	width: 450px;}
+    .dashed_line{
+    	justify-content: center;
+    }
+    .dashed2 {
+    	display: none;
+    }
+}
 @media screen and (max-width: 768px) {
 	body {
 		margin-left: 20px; 
@@ -985,6 +1019,11 @@ ul li{
 		display: flex;
 		flex-wrap: wrap;
 	}
+	.contact_page {
+		margin-left: 0;
+	}
+
+
 	.sign {
 		justify-content: space-between;
 		background-color: #f8fcff;
@@ -994,6 +1033,10 @@ ul li{
 	}
 	.dropdown ul{
 		display: none;
+	}
+	.contacts div:nth-child(2) {
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	.sign_in_wrap1 {
 		display: flex;
@@ -1035,8 +1078,9 @@ ul li{
 		display: block;
 	}
 	.btn-calc {
-		margin-right: 50px;
+		margin-right: 2%;
     	margin-top: 14px;
+    	margin-left: 5px;
 	}
 	.nav ul {
 		flex-wrap: nowrap;
@@ -1164,10 +1208,12 @@ ul li{
 	.contact-info {
 		display: flex;
 		margin-left: 20px;
+		margin-right: 20px;
+		justify-content: center;
 	}
-	.left_block_contact{
+	/*.left_block_contact{
 		max-width: 290px;
-	}
+	}*/
 	.dashed_line {
 		margin-left: 20px;
 		margin-right: 20px;
@@ -1223,12 +1269,26 @@ ul li{
 	}
 	
 }
+@media screen and (max-width: 637px){
+	.btn-calc {
+		margin: 0 0 0 40%;
+	}
+}
 @media screen and (max-width: 600px){
 	header {
 		padding: 10px;
 	}
+	.text_photo h1 {
+		font-size: 25px;
+	}
 	.calculate-768 {
 		display: none;
+	}
+	.brands img {
+		width: 100%;
+	}
+	.left_block img{
+		width: 33.3%;
 	}
 	.btn-calc {
 		margin-right: 10px;
@@ -1263,10 +1323,6 @@ ul li{
 	}
 	.calculate-600 a {
 		text-transform: capitalize;
-	}
-	.text_photo h1 {
-		font-size: 30px;
-
 	}
 	.text_photo p {
 		display: none;
@@ -1349,6 +1405,7 @@ ul li{
 	}
 	.price_order {
    		max-width: 500px;
+   		margin: 0 10px;
 	}
 	.contacts {
 		display: none;
@@ -1358,7 +1415,7 @@ ul li{
 	}
 	.contact-600-flex {
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-between;
 	}
 	.contact-600 h3 {
 		font-size: 14px;
@@ -1383,24 +1440,47 @@ ul li{
 
 	}
 	.contact-600-flex div:nth-child(1) {
-		min-width: 235px;
+		min-width: 40%;
 		max-height: 135px;
-		margin-right: 80px;
+		
+	}
+	.contact-600-flex div:nth-child(2){
+		width: 50%;
+		margin-left: 10px;
 	}
 	.img-super {
 		display: flex;
 		justify-content: flex-start;
+		flex-wrap: wrap;
 	}
 	.img-super img {
-		margin: 0 20px 0 0 ; 
+		margin: 0 20px 20px 0 ; 
+	}
+	.img-super h4 {
+		display: none;
 	}
 
 
+}
+@media screen and (max-width: 591px){
+	.btn-calc {
+		margin: 0 0 0 40%;
+	}
 }
 @media screen and (max-width: 400px){
 	.radio_btn{
 		min-height: 1030px;
 	}
+	.calculate-600 {
+		display: none;
+	}
+	.text_photo h1 {
+    	font-size: 15px;
+	}
+	.brands {
+		padding-right: 10px;
+	}
+
 }	
 @media screen and (max-width: 320px){
 	.phone-768 {
@@ -1408,8 +1488,11 @@ ul li{
 	}
 	.sign_in {
 		position: relative;
-		right: -130px;
+		right: -50%;
 		
+	}
+	.btn_order a {
+		max-width: 211px;
 	}
 	.sign {
 		background-color: white;
@@ -1421,6 +1504,10 @@ ul li{
 		position: relative;
 		top: -15px;
     	left: 10px;
+	}
+	.logo_super img {
+		width: 100%;
+		padding-right: 10px;
 	}
 	.vertical-align1 {
 		display: block;
@@ -1455,6 +1542,7 @@ ul li{
     	display: block;
 		color: #0073bb;
 		margin-top: 40px;
+		margin-left: 5px;
     }
     .phone_contact1:last-child{
 	display: block;
@@ -1592,6 +1680,7 @@ ul li{
 		max-width: 260px;
 	}
 	.contact-info {
+		justify-content: unset;
 		margin: 0 20px;
 	}
 	.img2 {
@@ -1641,6 +1730,7 @@ ul li{
 	.price_order2{
 		display: flex;
 		justify-content: center;
+		margin-bottom: 80px;
 	}
 	.price_order2:after {
 	    content: "";
@@ -1648,7 +1738,7 @@ ul li{
 	    height: 24px;
 	    background-image: url(../img/{3.png);
 	    position: absolute;
-	    bottom: -27px;
+	    bottom: -55px;
 	    left: 3%;
 	    background-repeat: no-repeat;
 	}
@@ -1660,5 +1750,48 @@ ul li{
 	}
 	.btn_order a {
 	    margin-left: 15%;
-
+	}
+	.name_form, .email_form {
+		width: 100%;
+		
+	}
+	
+	.text_from {
+		width: 100%;
+	}
+	
+	.name_email {
+		width: 100%;
+	}
 }	
+@media screen and (max-width: 312px){
+	.calculate-300{
+		margin-left: 25%;
+		margin-top: 10px;
+	}
+	.btn-calc {
+		margin-left: 30%;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+
+}
+@media screen and (max-width: 902px){
+	.busket .fas {
+		display: none;
+	}
+}	
+@media screen and (max-width: 822px){
+	.logo, .contact_info{
+		margin: 5px auto 0;
+	}
+}
+
+
+
+@media screen and (max-width: 768px){
+	.nav, .slick_photos {
+		margin-left: 2px;
+	}
+
+}
