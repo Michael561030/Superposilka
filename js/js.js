@@ -14,9 +14,20 @@ $(document).ready(function(){
 			  infinite: true,
 			  speed: 300,
 			  slidesToShow: 1,
-			  adaptiveHeight: true,
+			  // adaptiveHeight: true,
 			  autoplay:true,
-			  autoplaySpeed:2000,
+			  autoplaySpeed:1000,
+			  fade: true
+
+						});
+	$('.brandss').slick({
+			  dots: true,
+			  infinite: true,
+			  speed: 300,
+			  slidesToShow: 1,
+			  // adaptiveHeight: true,
+			  autoplay:true,
+			  autoplaySpeed:1000,
 			  fade: true
 
 						});
